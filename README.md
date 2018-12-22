@@ -108,5 +108,5 @@ choose **Next: Configure Instance Details**
 - choose **Network**, then choose your vpc,In my case VPC is **MSR-test-VPC**
 - Choose **Subnet**, then choose a subnet, In my case subnet is **MSR-test-Subnet-1**.
 - choose **Auto-assign Public IP**, then choose **Enable** 
-(**Optional**) In **Advanced details**,choose **User Data** and paste here **shell Script** file.(This file available on the above README.md).Here **shell script** used only for installing above software package automatically.
+  (**Optional**) In **Advanced details**,choose **User Data** and paste here **shell Script** file.(This file available on the above README.md).Here **shell script** used only for installing above software package automatically.
 
