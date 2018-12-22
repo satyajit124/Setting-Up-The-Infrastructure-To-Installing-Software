@@ -91,7 +91,9 @@ click on **Save routes**
 ## Launch EC2 instances using VPC
 ### Launch MSR-test-Instance-1 Using Ubuntu Server 16.04 LTS
 1. Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
 2. Choose **Launch Instance**.
+
 3. In **Step 1: Choose an Amazon Machine Image (AMI)**, find an **Ubuntu Server 16.04 LTS** and choose **Select**.
 
 ![screenshot 61 _li](https://user-images.githubusercontent.com/45427666/50373925-c752a580-060b-11e9-962a-89973c1259fc.jpg)
@@ -100,6 +102,8 @@ click on **Save routes**
 
 ![screenshot 62 _li](https://user-images.githubusercontent.com/45427666/50373953-316b4a80-060c-11e9-87cd-e61574a5f119.jpg)
 
-choose **Next: Configure Instance Details**.
+choose **Next: Configure Instance Details**
+
+5.
 
 
