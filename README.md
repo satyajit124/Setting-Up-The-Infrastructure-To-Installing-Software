@@ -30,5 +30,6 @@ It is a infrastrucuture project.here we have installed a software by doing a set
 - VPC Name = MSR-test-VPC
 - IPV4 CIDR = 10.0.0.0/16
 
-![screenshot 53](https://user-images.githubusercontent.com/45427666/50373016-62448300-05fe-11e9-9b5c-237a6ea0da66.png)
+![screenshot 53 _li](https://user-images.githubusercontent.com/45427666/50373056-075f5b80-05ff-11e9-8e2b-0b9d742a3983.jpg)
+
 Click on **Yes,Create** option
