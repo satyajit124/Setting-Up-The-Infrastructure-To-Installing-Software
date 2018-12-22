@@ -279,11 +279,49 @@ git --version
 
 
 ## Manually Software Package Install 
-### NVM – Version 0.33.2 installation
-update our packages:
+### NVM – Version 0.33.2 Installation
+
+**Step #1: Install a C++ Compiler**
+1. update our packages:
 ```shell
 apt-get update
 ```
+2. build-essential package installation
+```shell
+apt-get install build-essential libssl-dev
+```
+**Install NVM (Node Version Manager)**
+Use the following curl command to kick-off the install script:
+```shell
+curl https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+```
+After installation,run the following command:
+```shell
+source ~/.profile
+```
+**Verify the Installation**
+```shell
+nvm --version
+```
+
+### Node – 8.12.0 Installation
+ **Add Node.js PPA**
+ ```shell
+ sudo apt-get install curl python-software-properties
+ ```
+ ```shell
+ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+ ```
+**Install Node.js on Ubuntu**
+```shell
+sudo apt-get install nodejs
+```
+**Test Node.js**
+After installing node.js verify and check the installed version
+```shell
+node -v
+```
+
 
 
 
