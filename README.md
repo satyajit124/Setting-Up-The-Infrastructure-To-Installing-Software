@@ -108,5 +108,39 @@ choose **Next: Configure Instance Details**
 - choose **Network**, then choose your vpc,In my case VPC is **MSR-test-VPC**
 - Choose **Subnet**, then choose a subnet, In my case subnet is **MSR-test-Subnet-1**.
 - choose **Auto-assign Public IP**, then choose **Enable** 
-  (**Optional**) In **Advanced details**,choose **User Data** and paste here **shell Script** file.(This file available on the above README.md).Here **shell script** used only for installing above software package automatically.
+- (**Optional**) In **Advanced details**,choose **User Data** and paste here **shell Script** file.(This file available on the above README.md).Here **shell script** used only for installing above software package automatically.
+
+![screenshot 63 _li](https://user-images.githubusercontent.com/45427666/50374220-cf611400-0610-11e9-943f-d3e295f64541.jpg)
+
+Choose **Next: Add Storage** 
+
+6. In **Step 4: Add Storage**
+ 
+ ![screenshot 65 _li](https://user-images.githubusercontent.com/45427666/50374265-64fca380-0611-11e9-91f1-7d452c63fc26.jpg)
+
+Choose **Next: Tag Instance**
+7. In **Step 5: Tag Instance** Here we have tagged the instance Name as a **MSR-test-Instance-1**.
+
+![screenshot 64 _li](https://user-images.githubusercontent.com/45427666/50374294-03890480-0612-11e9-851c-554368352139.jpg)
+
+Choose **Next: Configure Security Group**
+
+8. In **Step 6: Configure Security Group**, review the contents of this page, ensure that **Assign a security group** is set to **Create a new security group**, and verify that the inbound rule being created has the following default values.
+- **Type:** SSH
+- **Protocol:** TCP
+- **Port Range:** 22
+- **Source:** Anywhere 0.0.0.0/0
+
+![gs-review-security-group-600w](https://user-images.githubusercontent.com/45427666/50374407-c7ef3a00-0613-11e9-8f9f-68983ffb5e4d.png)
+
+Choose **Review and Launch**
+
+9. Choose **Launch**
+
+10. Select the check box for the key pair that you created, and then choose **Launch Instances**.
+
+12. Choose **View Instances**
+
+
+
 
