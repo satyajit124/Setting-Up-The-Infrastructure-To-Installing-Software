@@ -23,6 +23,7 @@ It is a infrastrucuture project.here we have installed a software by doing a set
 
 - Git – 2.7.4
 ## Getting Started
+## Configure own VPC(Virtual Private Cloud) in AWS
 ### Step-1:Create VPC
 1. Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
 2. In the navigation pane, choose Your VPCs.then click on **Create VPC**.Specify your VPC Name and CIDR (Classless Inter-Domain Routing), In my case I am using the followings
@@ -53,9 +54,37 @@ click on **Create**
 
 click on **Create**
 
- ### step-3:Create a Route table and associate it with VPC
+ ### step-3: Create a Route table and associate it with Subnet
  1. From **VPC Dashboard**  there is an option create a Route table. Click on **Create Route Table**,Specify the Name of Route Table **MSR-test-RT** and Select your VPC, In my case VPC is **MSR-test-VPC**
  
  ![screenshot 58 _li](https://user-images.githubusercontent.com/45427666/50373360-ef3e0b00-0603-11e9-949c-d8a56c3fa852.jpg)
 
 click on **Create**
+
+2. Once the Route table is created, associated it with Subnet, Select and Right Click Your Route table and then  Select the **Subnet Associations** option, Then choose both the subnets.
+
+![screenshot 60 _li](https://user-images.githubusercontent.com/45427666/50373556-d8e57e80-0606-11e9-91dd-42e0d00c70d3.jpg)
+
+click on **Save**
+
+### step-4: Create Internet Gateway (igw) and attached it to your VPC
+1. From **VPC dashboard** there is an option to create Internet gateway. Click on **Create Internet gateway**,Specify the Name of Internet gateway **MSR-test-IGW**
+
+![screenshot 56 _li](https://user-images.githubusercontent.com/45427666/50373413-1517df80-0605-11e9-82ec-adaa26d5daf4.jpg)
+
+click on **Create**
+
+2. Once the Internet gateway is created, attached it to your VPC, Select and Right Click Your Internet gateway and then  Select the **Attach to VPC** option
+
+![screenshot 57 _li](https://user-images.githubusercontent.com/45427666/50373450-6e800e80-0605-11e9-8408-076a612ab444.jpg)
+
+click on **Attach**
+
+3. Now Add Route to your route Table for Internet, go to **Route Tables**  Option, Select your Route Table, In my case it is **MSR-test-RT**, click on Route Tab and Click on **Edit** and  the click on **add another route**
+
+Mention Destination IP of Internet as **0.0.0.0/0** and in the target option your Internet gateway will be populated automatically as shown below
+
+![screenshot 59 _li](https://user-images.githubusercontent.com/45427666/50373607-a9834180-0607-11e9-835a-895dd95f13b4.jpg)
+
+click on **Save routes**
+
