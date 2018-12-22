@@ -160,11 +160,122 @@ Once done click on **Open** button.
 
 Once you **connect**, you will successfully see the **ubuntu** prompt.
 
+### Launch MSR-test-Instance-2 Using Ubuntu Server 16.04 LTS
+Similarly,Launch **MSR-test-Instance-2** as the same step, 
+
+1. Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+
+2. Choose **Launch Instance**.
+
+3. In **Step 1: Choose an Amazon Machine Image (AMI)**, find an **Ubuntu Server 16.04 LTS** and choose **Select**.
+
+![screenshot 61 _li](https://user-images.githubusercontent.com/45427666/50373925-c752a580-060b-11e9-962a-89973c1259fc.jpg)
+
+4. In **Step 2: Choose an Instance Type**, Select **t2.micro** for free tier.choose **Next: Configure Instance Details**.
+
+![screenshot 62 _li](https://user-images.githubusercontent.com/45427666/50373953-316b4a80-060c-11e9-87cd-e61574a5f119.jpg)
+
+choose **Next: Configure Instance Details**
+
+5. In **Step 3: Configure Instance Details**
+- choose **Network**, then choose your vpc,In my case VPC is **MSR-test-VPC**
+- Choose **Subnet**, then choose a subnet, In my case subnet is **MSR-test-Subnet-2**.
+- choose **Auto-assign Public IP**, then choose **Enable** 
+- (**Optional**) In **Advanced details**,choose **User Data** and paste here **shell Script** file.(This file available on the above README.md).Here **shell script** used only for installing above software package automatically.
+
+![screenshot 63 _li](https://user-images.githubusercontent.com/45427666/50374220-cf611400-0610-11e9-943f-d3e295f64541.jpg)
+
+Choose **Next: Add Storage** 
+
+6. In **Step 4: Add Storage**
+ 
+ ![screenshot 65 _li](https://user-images.githubusercontent.com/45427666/50374265-64fca380-0611-11e9-91f1-7d452c63fc26.jpg)
+
+Choose **Next: Tag Instance**
+7. In **Step 5: Tag Instance** Here we have tagged the instance Name as a **MSR-test-Instance-2**.
+
+![screenshot 66 _li](https://user-images.githubusercontent.com/45427666/50375468-c299eb80-0623-11e9-8440-5a34c36340c5.jpg)
+
+Choose **Next: Configure Security Group**
+
+8. In **Step 6: Configure Security Group**, review the contents of this page, ensure that **Assign a security group** is set to **Create a new security group**, and verify that the inbound rule being created has the following default values.
+- **Type:** SSH
+- **Protocol:** TCP
+- **Port Range:** 22
+- **Source:** Anywhere 0.0.0.0/0
+
+![gs-review-security-group-600w](https://user-images.githubusercontent.com/45427666/50374407-c7ef3a00-0613-11e9-8f9f-68983ffb5e4d.png)
+
+Choose **Review and Launch**
+
+9. Choose **Launch**
+
+10. Select the check box for the key pair that you created, and then choose **Launch Instances**.
+
+12. Choose **View Instances**
+
+### Connect Ubuntu Instance
+1. Come back to your instances screen, you'll see that instance has received **Public IP**.
+
+2. Now open putty from your programs list and add same **Public IP** in Host Name.
+
+![screenshot 70](https://user-images.githubusercontent.com/45427666/50375166-10f8bb80-061f-11e9-9ca1-774cdbf4a30e.png)
+
+3. In this step,
+
+Add your private key in putty for secure connection.
+
+Go to **Auth**
+Add your private key in **.ppk** (putty private key) format. You will need to convert pem file from AWS to ppk using puttygen
+Once done click on **Open** button.
+
+![screenshot 71](https://user-images.githubusercontent.com/45427666/50375190-70ef6200-061f-11e9-9080-135c3dae1a8e.png)
+
+Once you **connect**, you will successfully see the **ubuntu** prompt.
+
+
+
+
+
 ### Verify the Software Package Installation
+Now,We check Both the **ubuntu** instance our software package install or not,
+
 1. We can quickly verify that NVM is now installed and working properly with the following command:
 ```shell
 nvm --version
 ```
+2. We can quickly verify that Node is now installed and working properly with the following command:
+```shell
+node -v
+```
+
+3. We can quickly verify that Docker is now installed and working properly with the following command:
+```shell
+docker --version
+```
+
+4. We can quickly verify that Docker-Compose is now installed and working properly with the following command:
+```shell
+docker-compose --version
+```
+
+5. We can quickly verify that Openssl is now installed and working properly with the following command:
+```shell
+openssl version
+```
+
+4. We can quickly verify that Git is now installed and working properly with the following command:
+```shell
+git --version
+```
+
+**Verify Result MSR-test-instance-1**
+![screenshot 69](https://user-images.githubusercontent.com/45427666/50375595-dcd4c900-0625-11e9-987b-43505d0a5600.png)
+
+**Verify Result MSR-test-instance-1**
+![screenshot 68](https://user-images.githubusercontent.com/45427666/50375605-13124880-0626-11e9-82f7-c2c7eca5cd49.png)
+
+
     
 
 
