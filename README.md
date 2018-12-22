@@ -10,3 +10,15 @@ It is a infrastrucuture project.here we have installed a software by doing a set
 - Hostname of Instance 1 : MSR-test-Instance-1.
 
 - Hostname of Instance 2 : MSR-test-Instance-2.
+### Install Software Package
+- NVM – Version 0.33.2
+
+- Node – 8.12.0
+
+- Docker – 18.09
+
+- Docker Compose – 1.17
+
+- Openssl – 1.0.2q
+
+- Git – 2.7.4
