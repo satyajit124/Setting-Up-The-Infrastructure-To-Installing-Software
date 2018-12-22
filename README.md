@@ -22,3 +22,6 @@ It is a infrastrucuture project.here we have installed a software by doing a set
 - Openssl – 1.0.2q
 
 - Git – 2.7.4
+## Getting Started
+#### Create VPC
+1. Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
