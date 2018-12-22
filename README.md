@@ -119,6 +119,7 @@ Choose **Next: Add Storage**
  ![screenshot 65 _li](https://user-images.githubusercontent.com/45427666/50374265-64fca380-0611-11e9-91f1-7d452c63fc26.jpg)
 
 Choose **Next: Tag Instance**
+
 7. In **Step 5: Tag Instance** Here we have tagged the instance Name as a **MSR-test-Instance-1**.
 
 ![screenshot 64 _li](https://user-images.githubusercontent.com/45427666/50374294-03890480-0612-11e9-851c-554368352139.jpg)
@@ -192,6 +193,7 @@ Choose **Next: Add Storage**
  ![screenshot 65 _li](https://user-images.githubusercontent.com/45427666/50374265-64fca380-0611-11e9-91f1-7d452c63fc26.jpg)
 
 Choose **Next: Tag Instance**
+
 7. In **Step 5: Tag Instance** Here we have tagged the instance Name as a **MSR-test-Instance-2**.
 
 ![screenshot 66 _li](https://user-images.githubusercontent.com/45427666/50375468-c299eb80-0623-11e9-8440-5a34c36340c5.jpg)
