@@ -141,6 +141,30 @@ Choose **Review and Launch**
 
 12. Choose **View Instances**
 
+### Connect Ubuntu Instance
+1. Come back to your instances screen, you'll see that instance has received **Public IP**.
 
+2. Now open putty from your programs list and add same **Public IP** in Host Name.
+
+![screenshot 70](https://user-images.githubusercontent.com/45427666/50375166-10f8bb80-061f-11e9-9ca1-774cdbf4a30e.png)
+
+3. In this step,
+
+Add your private key in putty for secure connection.
+
+Go to **Auth**
+Add your private key in **.ppk** (putty private key) format. You will need to convert pem file from AWS to ppk using puttygen
+Once done click on **Open** button.
+
+![screenshot 71](https://user-images.githubusercontent.com/45427666/50375190-70ef6200-061f-11e9-9080-135c3dae1a8e.png)
+
+Once you **connect**, you will successfully see the **ubuntu** prompt.
+
+### Verify the Software Package Installation
+1. We can quickly verify that NVM is now installed and working properly with the following command:
+```shell
+nvm --version
+```
+    
 
 
