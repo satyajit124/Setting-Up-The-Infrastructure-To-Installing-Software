@@ -1,0 +1,35 @@
+#!/bin/bash
+apt-get update
+apt-get install build-essential libssl-dev
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+source ~/.profile
+
+sudo apt-get install curl python-software-properties
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install nodejs
+
+apt-get install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+add-apt-repository  "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs) stable"
+apt-get update
+apt-cache policy docker-ce
+apt-get install -y docker-ce
+systemctl status docker
+
+curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
+openssl version
+cd /usr/src
+wget https://www.openssl.org/source/openssl-1.0.2-latest.tar.gz
+tar -zxf openssl-1.0.2-latest.tar.gz 
+cd openssl-1.0.2q
+./config
+make
+make test
+make install
+mv /usr/bin/openssl /root/
+ln -s /usr/local/ssl/bin/openssl /usr/bin/openssl
+
+apt-get update
+apt-get install git-core
