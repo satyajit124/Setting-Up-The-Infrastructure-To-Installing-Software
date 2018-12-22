@@ -23,7 +23,7 @@ It is a infrastrucuture project.here we have installed a software by doing a set
 
 - Git – 2.7.4
 ## Getting Started
-#### Step-1:Create VPC
+### Step-1:Create VPC
 1. Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
 2. In the navigation pane, choose Your VPCs.then click on **Create VPC**.Specify your VPC Name and CIDR (Classless Inter-Domain Routing), In my case I am using the followings
 
@@ -32,8 +32,8 @@ It is a infrastrucuture project.here we have installed a software by doing a set
 
 ![screenshot 53 _li](https://user-images.githubusercontent.com/45427666/50373056-075f5b80-05ff-11e9-8e2b-0b9d742a3983.jpg)
 
-Click on **Yes,Create** option
-#### Step-2: Create Subnet
+Click on **Create** option
+### Step-2: Create Subnet
 In this step we will create two private subnets, MSR-test-Subnet-1 (10.0.1.0/24) and MSR-test-Subnet-2 (10.0.2.0/24) across the availability zones.
 1. From the **VPC Dashboard** click on **Subnets** option and then click on **Create Subnet**
 
@@ -45,11 +45,17 @@ Specify the followings
 
 ![screenshot 54 _li](https://user-images.githubusercontent.com/45427666/50373242-abe29d00-0601-11e9-83c9-80b26bbc7012.jpg)
 
-click on **Yes, Create**
+click on **Create**
 
 2.  Similarly  Create **MSR-test-Subnet-2** with IPV4 CIDR **10.0.2.0/24** and Availability zone as **ap-south-1b**
 
 ![screenshot 55 _li](https://user-images.githubusercontent.com/45427666/50373273-52c73900-0602-11e9-804f-c622e75fffcc.jpg)
 
-click on **Yes, Create**
+click on **Create**
 
+ ### step-3:Create a Route table and associate it with VPC
+ 1. From **VPC Dashboard**  there is an option create a Route table. Click on **Create Route Table**,Specify the Name of Route Table **MSR-test-RT** and Select your VPC, In my case VPC is **MSR-test-VPC**
+ 
+ ![screenshot 58 _li](https://user-images.githubusercontent.com/45427666/50373360-ef3e0b00-0603-11e9-949c-d8a56c3fa852.jpg)
+
+click on **Create**
