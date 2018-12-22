@@ -322,7 +322,7 @@ sudo apt-get install nodejs
 node -v
 ```
 
-### Docker – 18.09
+### Docker – 18.09 Installation
 1. Install few **pre-requisite** packages by using the below command, if not installed.
 ```shell
 apt-get install apt-transport-https ca-certificates curl software-properties-common
@@ -357,8 +357,84 @@ systemctl start docker.service
 ```
 9. Verify it by checking its version.
 ```shell
-docker -v
+docker -version
 ```
+### Docker Compose – 1.17 Installation
+
+1. Run this command to download the latest version of Docker Compose:
+```shell
+ curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+ ```
+ 2. Apply executable permissions to the binary:
+ ```shell
+ chmod +x /usr/local/bin/docker-compose
+ ```
+ 3.Test the installation.
+ ```shell
+ docker-compose --version
+ ```
+ 
+ ### Openssl – 1.0.2q Installation
+ 1. Before starting the installation of **OpenSSL**, get the current version of OpenSSL by using the following command.
+```shell
+openssl version
+```
+2. After that, download the latest version of **OpenSSL** by deploying the following command.
+```shell
+cd /usr/src
+```
+```shell
+wget https://www.openssl.org/source/openssl-1.0.2-latest.tar.gz
+```
+3. Once it is downloaded, extract the downloaded **OpenSSL** tar file as follows.
+```shell
+tar -zxf openssl-1.0.2-latest.tar.gz
+```
+4. To manually compile OpenSSL and install/upgrade OpenSSL, make use of the following command.
+```shell
+cd openssl-1.0.2q
+```
+```shell
+./config 
+```
+5. After it is done, prepare the installation of OpenSSL by runninng the make command.
+```shell
+make
+```
+6. After it, run the make test command as follows.
+```shell
+make test
+```
+7. Once the command is executed, run the make install command which triggers the installation process.
+```shell
+make install
+```
+8. If the old version is still displayed or installed before, please make a copy of openssl bin file.
+```shell
+mv /usr/bin/openssl /root/
+```
+```shell
+ln -s /usr/local/ssl/bin/openssl /usr/bin/openssl
+```
+9. Now verify the OpenSSL version.
+```shell
+openssl version
+```
+
+### Git – 2.7.4 Installation (Latest)
+1. For package updates
+```shell
+apt-get update
+```
+2.Install **Git**
+```shell
+apt-get install git-core
+```
+3. Confirm Git the **installation**
+```shell
+git --version
+```
+
 
 
 
