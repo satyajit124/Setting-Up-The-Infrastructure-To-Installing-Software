@@ -317,9 +317,47 @@ nvm --version
 sudo apt-get install nodejs
 ```
 **Test Node.js**
-After installing node.js verify and check the installed version
+- After installing node.js verify and check the installed version
 ```shell
 node -v
+```
+
+### Docker – 18.09
+1. Install few **pre-requisite** packages by using the below command, if not installed.
+```shell
+apt-get install apt-transport-https ca-certificates curl software-properties-common
+```
+2. **Docker** package is available in the official ubuntu 16.04 itself, but in order to install the latest docker, we will use the official docker repository. Lets first add the GPG key of the official docker repository so that we can fetch the package from there.
+```shell
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+3. Add the docker repository to the apt source.
+```shell
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+```
+4. Lets update the repository from the added docker repository
+```shell
+apt-get update
+```
+5. To make sure that the  docker is installed from the docker repository, not from the local ubuntu 16.04 repository, lets cache it by using below command
+```shell
+apt-cache policy docker-ce
+```
+6. Now we are all set to install docker
+```shell
+apt-get install docker-ce -y
+```
+7. Check whether the docker service is running or not.
+```shell
+systemctl status docker.service
+```
+8. If the Docker Service is not running, make sure to start it
+```shell
+systemctl start docker.service
+```
+9. Verify it by checking its version.
+```shell
+docker -v
 ```
 
 
