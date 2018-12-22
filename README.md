@@ -270,10 +270,21 @@ git --version
 ```
 
 **Verify Result MSR-test-instance-1**
+
 ![screenshot 69](https://user-images.githubusercontent.com/45427666/50375595-dcd4c900-0625-11e9-987b-43505d0a5600.png)
 
 **Verify Result MSR-test-instance-1**
+
 ![screenshot 68](https://user-images.githubusercontent.com/45427666/50375605-13124880-0626-11e9-82f7-c2c7eca5cd49.png)
+
+
+## Manually Software Package Install 
+### NVM – Version 0.33.2 installation
+update our packages:
+```shell
+apt-get update
+```
+
 
 
     
