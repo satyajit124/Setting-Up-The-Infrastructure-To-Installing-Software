@@ -25,7 +25,7 @@ It is a infrastrucuture project.here we have installed a software by doing a set
 ## Getting Started
 #### Step-1:Create VPC
 1. Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.
-2.In the navigation pane, choose Your VPCs.then click on **Create VPC**.Specify your VPC Name and CIDR (Classless Inter-Domain Routing), In my case I am using the followings
+2. In the navigation pane, choose Your VPCs.then click on **Create VPC**.Specify your VPC Name and CIDR (Classless Inter-Domain Routing), In my case I am using the followings
 
 - VPC Name = MSR-test-VPC
 - IPV4 CIDR = 10.0.0.0/16
